@@ -1,0 +1,10 @@
+<button (click)="getInfo()">get Info</button>
+
+<input type="text" #newTitle>
+<button (click)="changeTitle()">change title</button>
+
+
+<div *ngIf="content" class="main-text">
+  <h1>{{content.heading}}</h1>
+  <p *ngFor="let item of content['body_sections']">{{item}}</p>
+</div>
